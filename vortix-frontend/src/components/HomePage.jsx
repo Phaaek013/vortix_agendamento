@@ -3,71 +3,119 @@ import './HomePage.css'
 function HomePage() {
   return (
     <div className="homepage">
-      <header className="homepage-hero">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Bem-vindo ao <span className="gradient-text">Vortix</span>
-          </h1>
-          <p className="hero-subtitle">
-            Uma plataforma moderna e poderosa para transformar suas ideias em realidade
-          </p>
-          <div className="hero-buttons">
-            <button className="btn btn-primary">Começar Agora</button>
-            <button className="btn btn-secondary">Saiba Mais</button>
+      {/* Header */}
+      <header className="header">
+        <div className="header-container">
+          <div className="logo">
+            <div className="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+                <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <span className="logo-text">Vortix ClinicOps</span>
+          </div>
+          
+          <nav className="nav">
+            <a href="#inicio" className="nav-link">Inicio</a>
+            <a href="#servicos" className="nav-link">Serviços</a>
+            <a href="#profissionais" className="nav-link">Profissionais</a>
+            <a href="#agendar" className="nav-link">Agendar</a>
+          </nav>
+          
+          <div className="header-actions">
+            <button className="btn-login">Entrar</button>
+            <button className="btn-account">Minha Conta</button>
           </div>
         </div>
       </header>
 
-      <section className="homepage-features">
-        <div className="container">
-          <h2 className="section-title">Recursos Principais</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3 className="feature-title">Performance</h3>
-              <p className="feature-description">
-                Construído com as tecnologias mais modernas para máxima velocidade e eficiência
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🎨</div>
-              <h3 className="feature-title">Design Moderno</h3>
-              <p className="feature-description">
-                Interface intuitiva e elegante que proporciona uma experiência excepcional
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🔒</div>
-              <h3 className="feature-title">Segurança</h3>
-              <p className="feature-description">
-                Proteção de dados e privacidade são nossas prioridades
-              </p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🚀</div>
-              <h3 className="feature-title">Escalável</h3>
-              <p className="feature-description">
-                Cresça sem limites com uma arquitetura preparada para o futuro
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="homepage-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">Pronto para começar?</h2>
-            <p className="cta-description">
-              Junte-se a milhares de usuários que já estão transformando suas ideias em realidade
+      {/* Main Content */}
+      <main className="main-content">
+        <div className="content-container">
+          {/* Left Section - Marketing Content */}
+          <div className="marketing-section">
+            <div className="new-app-badge">NOVO APP DISPONÍVEL</div>
+            
+            <h1 className="main-title">
+              Sua saúde simplificada e organizada.
+            </h1>
+            
+            <p className="main-description">
+              Agende consultas e exames com facilidade na Vortix. Cuidamos de você com tecnologia avançada e atendimento humanizado.
             </p>
-            <button className="btn btn-primary btn-large">Começar Agora</button>
+            
+            <div className="action-buttons">
+              <button className="btn-primary">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 2H5C3.89543 2 3 2.89543 3 4V16C3 17.1046 3.89543 18 5 18H15C16.1046 18 17 17.1046 17 16V4C17 2.89543 16.1046 2 15 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 7H17M7 2V7M13 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                Agendar agora
+              </button>
+              <button className="btn-secondary">
+                Ver serviços
+              </button>
+            </div>
+            
+            <div className="social-proof">
+              <div className="avatars">
+                <div className="avatar"></div>
+                <div className="avatar"></div>
+                <div className="avatar"></div>
+              </div>
+              <span className="proof-text">+2k Pacientes atendidos este mês</span>
+            </div>
+          </div>
+
+          {/* Right Section - Quick Scheduling Form */}
+          <div className="scheduling-card">
+            <div className="card-header">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="lightning-icon">
+                <path d="M11.25 1.25L8.75 8.75H12.5L8.75 18.75L11.25 11.25H7.5L11.25 1.25Z" fill="currentColor"/>
+              </svg>
+              <h2 className="card-title">Agendamento Rápido</h2>
+            </div>
+            
+            <div className="form-group">
+              <div className="input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="input-icon">
+                  <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <input 
+                  type="text" 
+                  placeholder="Ex: Cardiologia" 
+                  className="form-input"
+                />
+              </div>
+            </div>
+            
+            <div className="form-group">
+              <div className="input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="input-icon">
+                  <path d="M15 2.5H5C3.61929 2.5 2.5 3.61929 2.5 5V15C2.5 16.3807 3.61929 17.5 5 17.5H15C16.3807 17.5 17.5 16.3807 17.5 15V5C17.5 3.61929 16.3807 2.5 15 2.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13.3333 1.66667V4.16667M6.66667 1.66667V4.16667M2.5 7.5H17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <input 
+                  type="text" 
+                  placeholder="Selecione uma data" 
+                  className="form-input"
+                />
+              </div>
+            </div>
+            
+            <button className="btn-search">Buscar Horários</button>
+            
+            <div className="availability-indicator">
+              <div className="green-dot"></div>
+              <span>Médicos disponíveis agora</span>
+            </div>
           </div>
         </div>
-      </section>
+      </main>
     </div>
   )
 }
 
 export default HomePage
-

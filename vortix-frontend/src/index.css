@@ -3,10 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark light;
-  color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
-  background-attachment: fixed;
+  color-scheme: light;
+  color: #213547;
+  background: #f8f9fa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,30 +22,20 @@
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  place-items: center;
+  background: #f8f9fa;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+  background: #f8f9fa;
 }
 
-@media (prefers-color-scheme: light) {
+/* Dark mode support (opcional) */
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    background-attachment: fixed;
-  }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .card code {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #764ba2;
+    color: rgba(255, 255, 255, 0.87);
+    background: #1a1a1a;
   }
 }
 
