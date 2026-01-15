@@ -1,0 +1,3 @@
+[submodule "vortix-backend"]
+	path = vortix-backend
+	url = https://github.com/VortixClinicorps/vortix-backend.git
