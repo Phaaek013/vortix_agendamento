@@ -1,0 +1,187 @@
+.why-choose-us {
+  width: 100%;
+  background: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.why-choose-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 0.75rem 0;
+  text-align: left;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #20b2aa;
+  margin: 0 0 3rem 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.feature-icon-blue {
+  background: #e3f2fd;
+  color: #2196f3;
+}
+
+.feature-icon-green {
+  background: #e8f5e9;
+  color: #4caf50;
+}
+
+.feature-icon-purple {
+  background: #f3e5f5;
+  color: #9c27b0;
+}
+
+.feature-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 0.75rem 0;
+}
+
+.feature-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #20b2aa;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .feature-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feature-title {
+    font-size: 1.125rem;
+  }
+
+  .feature-description {
+    font-size: 0.875rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .why-choose-us {
+    background: #1a1a1a;
+  }
+
+  .section-title {
+    color: #ffffff;
+  }
+
+  .section-subtitle {
+    color: #20b2aa;
+  }
+
+  .feature-card {
+    background: #2d2d2d;
+    border: 1px solid #404040;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: #505050;
+  }
+
+  .feature-icon-blue {
+    background: rgba(33, 150, 243, 0.2);
+    color: #64b5f6;
+  }
+
+  .feature-icon-green {
+    background: rgba(76, 175, 80, 0.2);
+    color: #81c784;
+  }
+
+  .feature-icon-purple {
+    background: rgba(156, 39, 176, 0.2);
+    color: #ba68c8;
+  }
+
+  .feature-title {
+    color: #ffffff;
+  }
+
+  .feature-description {
+    color: #a0a0a0;
+  }
+}
+

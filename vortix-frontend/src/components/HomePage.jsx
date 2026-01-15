@@ -1,4 +1,5 @@
 import './HomePage.css'
+import WhyChooseUs from './WhyChooseUs'
 
 function HomePage() {
   return (
@@ -114,6 +115,9 @@ function HomePage() {
           </div>
         </div>
       </main>
+
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
     </div>
   )
 }
