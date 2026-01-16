@@ -4,7 +4,7 @@ function WhyChooseUs() {
   return (
     <div className="why-choose-us">
       <div className="why-choose-us-container">
-        <h1 className="section-title">Por que escolher a LifeMed?</h1>
+        <h1 className="section-title">Por que escolher a Vortix?</h1>
         <p className="section-subtitle">Tecnologia que trabalha a favor da sua saúde.</p>
         
         <div className="features-grid">

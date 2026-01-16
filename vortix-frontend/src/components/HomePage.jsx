@@ -1,9 +1,16 @@
 import './HomePage.css'
 import WhyChooseUs from './WhyChooseUs'
 
-function HomePage() {
+function HomePage({ onNavigate }) {
+  const handleNavClick = (e, page) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(page);
+    }
+  };
+
   return (
-    <div className="homepage">
+    <div className="homepage" id="inicio">
       {/* Header */}
       <header className="header">
         <div className="header-container">
@@ -18,8 +25,8 @@ function HomePage() {
           </div>
           
           <nav className="nav">
-            <a href="#inicio" className="nav-link">Inicio</a>
-            <a href="#servicos" className="nav-link">Serviços</a>
+            <a href="#inicio" className="nav-link" onClick={(e) => handleNavClick(e, 'home')}>Inicio</a>
+            <a href="#servicos" className="nav-link" onClick={(e) => handleNavClick(e, 'services')}>Serviços</a>
             <a href="#profissionais" className="nav-link">Profissionais</a>
             <a href="#agendar" className="nav-link">Agendar</a>
           </nav>
@@ -54,7 +61,7 @@ function HomePage() {
                 </svg>
                 Agendar agora
               </button>
-              <button className="btn-secondary">
+              <button className="btn-secondary" onClick={(e) => handleNavClick(e, 'services')}>
                 Ver serviços
               </button>
             </div>
