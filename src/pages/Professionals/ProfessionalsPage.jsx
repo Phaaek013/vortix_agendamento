@@ -64,8 +64,6 @@ export default function ProfessionalsPage() {
 
   return (
     <div className="pro-page">
-      <SiteHeader />
-
       <main className="pro-main">
         <div className="pro-container">
           <div className="pro-breadcrumbs">
@@ -170,48 +168,7 @@ export default function ProfessionalsPage() {
           </section>
         </div>
       </main>
-
-      <SiteFooter />
     </div>
-  );
-}
-
-function SiteHeader() {
-  return (
-    <header className="site-header">
-      <div className="site-brand">
-        <span className="material-symbols-outlined site-brandIcon">
-          local_hospital
-        </span>
-        <span className="site-brandName">LifeMed ClinicOps</span>
-      </div>
-
-      <nav className="site-nav">
-        <a href="#">Início</a>
-        <a href="#">Especialidades</a>
-        <a className="active" href="#">
-          Profissionais
-        </a>
-        <a href="#">Contato</a>
-      </nav>
-
-      <div className="site-actions">
-        <button className="btn btn--primary" onClick={() => devWarn("[TODO] Implementar: agendar")}>
-          Agendar
-        </button>
-        <button className="btn btn--ghost" onClick={() => devWarn("[TODO] Implementar: login")}>
-          Login
-        </button>
-      </div>
-    </header>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer className="site-footer">
-      <p>© 2024 LifeMed ClinicOps. Todos os direitos reservados.</p>
-    </footer>
   );
 }
 
