@@ -4,119 +4,6 @@
   background: #f8f9fa;
 }
 
-/* Header */
-.services-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e9ecef;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.services-header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: #212529;
-}
-
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #20b2aa;
-}
-
-.logo-text {
-  color: #212529;
-}
-
-.services-nav {
-  display: flex;
-  gap: 2rem;
-  flex: 1;
-  justify-content: center;
-}
-
-.nav-link {
-  color: #495057;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  transition: color 0.2s ease;
-  position: relative;
-}
-
-.nav-link:hover {
-  color: #20b2aa;
-}
-
-.nav-link-active {
-  color: #20b2aa;
-}
-
-.nav-link-active::after {
-  content: '';
-  position: absolute;
-  bottom: -1.5rem;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #20b2aa;
-}
-
-.header-actions {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.btn-login {
-  padding: 0.5rem 1.25rem;
-  background: #2196f3;
-  border: none;
-  border-radius: 6px;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-login:hover {
-  background: #1976d2;
-  transform: translateY(-1px);
-}
-
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #e3f2fd;
-  color: #2196f3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: 2px solid #e3f2fd;
-}
-
 /* Main Content */
 .services-main {
   padding: 2rem 2rem 4rem;
@@ -613,15 +500,6 @@
 }
 
 @media (max-width: 768px) {
-  .services-header-container {
-    padding: 0 1rem;
-    gap: 1rem;
-  }
-
-  .services-nav {
-    display: none;
-  }
-
   .services-main {
     padding: 1.5rem 1rem 3rem;
   }
@@ -671,29 +549,8 @@
     background: #1a1a1a;
   }
 
-  .services-header {
-    background: #2d2d2d;
-    border-bottom-color: #404040;
-  }
-
-  .logo-text,
   .section-title {
     color: #ffffff;
-  }
-
-  .nav-link {
-    color: #d0d0d0;
-  }
-
-  .nav-link:hover,
-  .nav-link-active {
-    color: #20b2aa;
-  }
-
-  .user-avatar {
-    background: rgba(33, 150, 243, 0.2);
-    color: #64b5f6;
-    border-color: rgba(33, 150, 243, 0.3);
   }
 
   .section-subtitle,
