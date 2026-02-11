@@ -1,43 +1,9 @@
 import './HomePage.css'
-import WhyChooseUs from './WhyChooseUs'
+import WhyChooseUs from '../WhyChooseUs/WhyChooseUs'
 
 function HomePage({ onNavigate }) {
-  const handleNavClick = (e, page) => {
-    e.preventDefault();
-    if (onNavigate) {
-      onNavigate(page);
-    }
-  };
-
   return (
     <div className="homepage" id="inicio">
-      {/* Header */}
-      <header className="header">
-        <div className="header-container">
-          <div className="logo">
-            <div className="logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
-                <path d="M12 8V16M8 12H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <span className="logo-text">Vortix ClinicOps</span>
-          </div>
-          
-          <nav className="nav">
-            <a href="#inicio" className="nav-link" onClick={(e) => handleNavClick(e, 'home')}>Inicio</a>
-            <a href="#servicos" className="nav-link" onClick={(e) => handleNavClick(e, 'services')}>Serviços</a>
-            <a href="#profissionais" className="nav-link">Profissionais</a>
-            <a href="#agendar" className="nav-link">Agendar</a>
-          </nav>
-          
-          <div className="header-actions">
-            <button className="btn-login">Entrar</button>
-            <button className="btn-account">Minha Conta</button>
-          </div>
-        </div>
-      </header>
-
       {/* Main Content */}
       <main className="main-content">
         <div className="content-container">
@@ -54,14 +20,14 @@ function HomePage({ onNavigate }) {
             </p>
             
             <div className="action-buttons">
-              <button className="btn-primary">
+              <button className="btn-primary" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 2H5C3.89543 2 3 2.89543 3 4V16C3 17.1046 3.89543 18 5 18H15C16.1046 18 17 17.1046 17 16V4C17 2.89543 16.1046 2 15 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M3 7H17M7 2V7M13 2V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 Agendar agora
               </button>
-              <button className="btn-secondary" onClick={(e) => handleNavClick(e, 'services')}>
+              <button className="btn-secondary" onClick={(e) => { e.preventDefault(); onNavigate?.('services') }}>
                 Ver serviços
               </button>
             </div>
@@ -130,3 +96,4 @@ function HomePage({ onNavigate }) {
 }
 
 export default HomePage
+

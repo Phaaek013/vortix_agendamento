@@ -1,48 +1,8 @@
 import './ServicesPage.css'
 
 function ServicesPage({ onNavigate }) {
-  const handleNavClick = (e, page) => {
-    e.preventDefault();
-    if (onNavigate) {
-      onNavigate(page);
-    }
-  };
-
   return (
     <div className="services-page" id="servicos">
-      {/* Header */}
-      <header className="services-header">
-        <div className="services-header-container">
-          <div className="logo">
-            <div className="logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <span className="logo-text">Vortix ClinicOps</span>
-          </div>
-          
-          <nav className="services-nav">
-            <a href="#inicio" className="nav-link" onClick={(e) => handleNavClick(e, 'home')}>Inicio</a>
-            <a href="#agendamentos" className="nav-link nav-link-active">Agendamentos</a>
-            <a href="#resultados" className="nav-link">Resultados</a>
-            <a href="#perfil" className="nav-link">Perfil</a>
-          </nav>
-          
-          <div className="header-actions">
-            <button className="btn-login">Entrar</button>
-            <div className="user-avatar">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
-                <path d="M6 21C6 17 9 14 12 14C15 14 18 17 18 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Main Content */}
       <main className="services-main">
         <div className="services-container">
@@ -121,7 +81,7 @@ function ServicesPage({ onNavigate }) {
                 Avaliação completa da saúde do coração, incluindo análise de pressão arterial, ritmo cardíaco e orientações preventivas.
               </p>
               <div className="service-actions">
-                <button className="btn-schedule">Agendar</button>
+                <button className="btn-schedule" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>Agendar</button>
                 <a href="#" className="link-details">Ver detalhes</a>
               </div>
             </div>
@@ -148,7 +108,7 @@ function ServicesPage({ onNavigate }) {
                 Diagnóstico e tratamento de doenças de pele, cabelos e unhas. Ideal para consultas de rotina e acompanhamento.
               </p>
               <div className="service-actions">
-                <button className="btn-schedule">Agendar</button>
+                <button className="btn-schedule" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>Agendar</button>
                 <a href="#" className="link-details">Ver detalhes</a>
               </div>
             </div>
@@ -175,7 +135,7 @@ function ServicesPage({ onNavigate }) {
                 Acompanhamento do desenvolvimento infantil, vacinas e orientações gerais sobre saúde e bem-estar da criança.
               </p>
               <div className="service-actions">
-                <button className="btn-schedule">Agendar</button>
+                <button className="btn-schedule" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>Agendar</button>
                 <a href="#" className="link-details">Ver detalhes</a>
               </div>
             </div>
@@ -199,7 +159,7 @@ function ServicesPage({ onNavigate }) {
                 Teste de acuidade visual, refração e pressão intraocular para prescrição de óculos ou lentes de contato.
               </p>
               <div className="service-actions">
-                <button className="btn-schedule">Agendar</button>
+                <button className="btn-schedule" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>Agendar</button>
                 <a href="#" className="link-details">Ver detalhes</a>
               </div>
             </div>
@@ -225,7 +185,7 @@ function ServicesPage({ onNavigate }) {
                 Elaboração de planos alimentares personalizados para reeducação alimentar e melhoria da qualidade de vida.
               </p>
               <div className="service-actions">
-                <button className="btn-schedule">Agendar</button>
+                <button className="btn-schedule" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>Agendar</button>
                 <a href="#" className="link-details">Ver detalhes</a>
               </div>
             </div>
@@ -249,7 +209,7 @@ function ServicesPage({ onNavigate }) {
                 Diagnóstico de dores articulares, lesões esportivas e problemas de coluna.
               </p>
               <div className="service-actions">
-                <button className="btn-schedule">Agendar</button>
+                <button className="btn-schedule" onClick={(e) => { e.preventDefault(); onNavigate?.('appointment') }}>Agendar</button>
                 <a href="#" className="link-details">Ver detalhes</a>
               </div>
             </div>
